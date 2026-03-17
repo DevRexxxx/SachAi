@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "सचAI",
+    "tagline": "उन्नत मीडिया फोरेंसिक विश्लेषण",
+    "subtitle": "सचAI by ALT F4 // 2026",
+    "unit": "न्यूरल फोरेंसिक्स यूनिट",
+    "protection": "डिजिटल रूप से बदले गए मीडिया की सुरक्षा सक्रिय",
+    "startVerification": "सत्यापन शुरू करें",
+    "systemActive": "सिस्टम_सक्रिय"
+  },
+  "nav": {
+    "origin": "उत्पत्ति",
+    "confidence": "विश्वास",
+    "theme": "विषय"
+  },
+  "evidence": {
+    "title": "साक्ष्य_इनपुट",
+    "clearUpload": "अपलोड साफ़ करें"
+  },
+  "counter": {
+    "title": "काउंटर उपाय",
+    "takedown": "वेब से हटाएं",
+    "fileReport": "कानूनी रिपोर्ट दर्ज करें",
+    "downloadReport": "रिपोर्ट डाउनलोड करें",
+    "copyReport": "रिपोर्ट कॉपी करें",
+    "copySuccess": "रिपोर्ट क्लिपबोर्ड पर कॉपी हो गई!",
+    "compare": "तुलना करें",
+    "exportPDF": "PDF निर्यात करें"
+  },
+  "analysis": {
+    "finalVerdict": "अंतिम निर्णय",
+    "sachaiScore": "सचAI-स्कोर",
+    "technicalSummary": "तकनीकी सारांश",
+    "circulationIntel": "वैश्विक प्रसार इंटेल",
+    "detectedAnomalies": "पाई गई असामान्यताएं",
+    "osintTitle": "OSINT और प्रसार इंटेलिजेंस",
+    "probableOrigin": "संभावित उत्पत्ति",
+    "contentTheme": "सामग्री विषय",
+    "osintConfidence": "OSINT विश्वास",
+    "circulationChannels": "संभावित प्रसार चैनल",
+    "scanning": "विश्लेषण जारी है",
+    "scanningNet": "नेटवर्क स्प्रेड स्कैनिंग...",
+    "frameOffset": "फ्रेम ऑफसेट",
+    "forensicPending": "फोरेंसिक स्कैन बाकी",
+    "syntheticMedia": "सिंथेटिक मीडिया"
+  },
+  "comparison": {
+    "title": "विश्लेषण तुलना",
+    "selectFirst": "पहला विश्लेषण चुनें",
+    "selectSecond": "दूसरा विश्लेषण चुनें",
+    "noAnalysis": "कोई विश्लेषण उपलब्ध नहीं। कृपया पहले मीडिया फ़ाइल का विश्लेषण करें।",
+    "verdict": "निर्णय",
+    "score": "स्कोर",
+    "riskLevel": "जोखिम स्तर",
+    "anomalies": "असामान्यताएं",
+    "origin": "उत्पत्ति",
+    "osintConfidence": "OSINT विश्वास",
+    "close": "बंद करें",
+    "exportComparison": "तुलना निर्यात करें",
+    "analysis1": "विश्लेषण A",
+    "analysis2": "विश्लेषण B",
+    "delta": "अंतर",
+    "higher": "अधिक जोखिम",
+    "lower": "कम जोखिम",
+    "same": "समान"
+  },
+  "shortcuts": {
+    "title": "कीबोर्ड शॉर्टकट",
+    "upload": "फ़ाइल अपलोड खोलें",
+    "download": "वर्तमान रिपोर्ट डाउनलोड करें",
+    "copy": "रिपोर्ट क्लिपबोर्ड पर कॉपी करें",
+    "copyComparison": "तुलना रिपोर्ट कॉपी करें",
+    "clear": "सभी डेटा साफ़ करें",
+    "help": "यह शॉर्टकट पैनल दिखाएं",
+    "close": "बंद करें"
+  },
+  "language": {
+    "select": "भाषा",
+    "en": "English",
+    "hi": "हिन्दी",
+    "es": "Español"
+  },
+  "footer": {
+    "credit": "सचAI by ALT F4 // भारत"
+  },
+  "errors": {
+    "scannerFailure": "स्कैनर विफलता"
+  }
+}
