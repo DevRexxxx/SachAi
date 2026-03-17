@@ -10,19 +10,18 @@ import { VideoFrame } from "../types";
 /* =========================================================
           API CONFIGURATION
    ========================================================= */
-const API_KEY = "AIzaSyDRTUshTMRBdblYnjxa7WTHBNqgy0kp1yE";
+const API_KEY = process.env.API_KEY || process.env.GEMINI_API_KEY;
+
+if (!API_KEY) {
+  throw new Error("Missing Gemini API key. Set GEMINI_API_KEY in your environment.");
+}
 
 /* =========================================================
        HARDENED FORENSIC ANALYSIS ENGINE
    ========================================================= */
 export const analyzeVideoIntegrity = async (frames: VideoFrame[]) => {
 
-  if (!API_KEY) {
-    throw new Error("Missing API key.");
-  }
-
-  const ai = new GoogleGenAI({ apiKey: API_KEY 
-  });
+  const ai = new GoogleGenAI({ apiKey: API_KEY });
 
   const isPhoto = frames.length === 1;
 

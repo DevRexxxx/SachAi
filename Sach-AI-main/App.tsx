@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useMemo, useEffect, useRef } from 'react';
 import VideoProcessor from './components/VideoProcessor';
 import { analyzeVideoIntegrity } from './services/geminiService';
-import { VideoFrame, AppStatus } from './types';
+import { VideoFrame, AppStatus, AgentResult } from './types';
 
 // --- ENHANCED NEURAL BLINK & FORENSIC STYLES ---
 const scannerStyles = `
@@ -99,22 +99,6 @@ const scannerStyles = `
     opacity: 0.7;
   }
 `;
-
-interface AgentResult {
-  isExplicit: boolean;
-  integrityScore: number;
-  verdict: string;
-  summary: string;
-  explanation: string;
-  riskLevel: 'Low' | 'Medium' | 'High';
-  anomalies: { timestamp: string; description: string; severity: string; }[];
-  safetyRecommendation: string;
-  activeCountermeasure?: string;
-  probableOrigin?: string;
-  contentTheme?: string;
-  osintConfidence?: string;
-  circulationChannels?: string[];
-}
 
 const App: React.FC = () => {
   const [isLanding, setIsLanding] = useState(true);
