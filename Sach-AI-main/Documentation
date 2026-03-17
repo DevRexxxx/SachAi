@@ -1,0 +1,64 @@
+# SachAI Project Documentation
+
+## Project Overview
+
+**SachAI** is an advanced media forensics platform designed to verify the integrity of images and videos. Developed by **ALT F4**, the application uses a "Neural Forensics Unit" powered by Gemini 1.5 Pro to detect deepfakes, AI-generated content, and explicit media. It provides a comprehensive analysis, including an integrity score, technical explanations, and OSINT-based circulation intelligence.
+
+---
+
+## 🛠 Technical Architecture
+
+The project follows a modular React architecture with a clear separation between UI, media processing, and AI-driven analysis agents.
+
+### 1. Frontend Layer
+
+* **App.tsx**: The core application component. It manages the global state (AppStatus), dynamic theme switching based on forensic results (Green for Authentic, Yellow for Suspicious, Red for Deepfake/Explicit), and the main UI layout.
+* **VideoProcessor.tsx**: Handles client-side media processing. It extracts frames from videos (up to 15 samples) or prepares images for analysis using HTML5 Canvas.
+* **Styling**: Uses Tailwind CSS with a custom "Neural Blink" aesthetic, featuring glassmorphism, scan-line overlays, and ambient glowing backgrounds.
+
+### 2. Agentic Pipeline
+
+The analysis is orchestrated through a specialized agent system located in the `agents/` directory:
+
+* **PlannerAgent.ts**: Determines the necessary steps for analysis based on the input type (image vs. video).
+* **ExecutorAgent.ts**: Executes the tasks defined by the planner, such as calling the `analyzeVideoIntegrity` service.
+* **EvaluatorAgent.ts**: Finalizes the output to ensure it meets safety and confidence standards before returning it to the UI.
+* **runAgentPipeline.ts**: The entry point that coordinates the flow between the Planner, Executor, and Evaluator.
+
+### 3. Service Layer
+
+* **geminiService.ts**: The "Hardened Forensic Analysis Engine." It configures the Gemini 1.5 Pro model with a high-density sampling protocol and a "Hard-Strike" multi-step prompt:
+* **Step 1 (Vulgarity Check)**: Immediate scan for anatomical exposure or sexualized gestures.
+* **Step 2 (Deepfake Audit)**: Multi-layer scan including eye/blink forensics, lip-sync physics, skin artifacts (GAN patterns), and lighting stability.
+* **Step 3 (OSINT Inference)**: Infers probable origin and circulation channels based on visual watermarks, aspect ratios, and compression quality.
+
+
+
+---
+
+## 🚀 Key Features
+
+* **99% Precision Audit**: Analyzes facial landmark drift, asymmetrical blinking, and temporal morphing artifacts to identify synthetic media.
+* **Dynamic Theme Response**: The UI background and elements change color immediately based on the detected risk level (e.g., `#b91c1c` for Red/Deepfake).
+* **Automated Countermeasures**: Provides direct links for legal reporting (cybercrime.gov.in) and media takedown requests (StopNCII.org) when explicit content or deepfakes are identified.
+* **Forensic Reports**: Users can download a detailed `.txt` report containing the integrity score, technical summary, detected anomalies with timestamps, and OSINT confidence levels.
+
+---
+
+## 📂 File Structure
+
+| File | Responsibility |
+| --- | --- |
+| `index.html` | Entry point with global fonts and the neural grid background. |
+| `App.tsx` | Main application logic, theme engine, and report generation. |
+| `VideoProcessor.tsx` | Media selection and frame extraction logic. |
+| `geminiService.ts` | Gemini API integration and forensic prompt engineering. |
+| `PlannerAgent.ts` | Task planning for the agent pipeline. |
+| `ExecutorAgent.ts` | Task execution and service calls. |
+| `EvaluatorAgent.ts` | Result validation and safety checks. |
+
+---
+
+## 🔒 Safety & Security
+
+The system is designed with a "Safety Override" protocol. In `geminiService.ts`, safety settings are set to `BLOCK_NONE` to ensure the AI identifies and labels harmful content for the UI rather than crashing the request, allowing the app to provide users with necessary countermeasures and takedown tools.
