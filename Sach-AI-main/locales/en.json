@@ -78,7 +78,15 @@
     "select": "Language",
     "en": "English",
     "hi": "हिन्दी",
-    "es": "Español"
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "zh": "中文",
+    "ja": "日本語",
+    "pt": "Português",
+    "ru": "Русский",
+    "ar": "العربية",
+    "ko": "한국어"
   },
   "footer": {
     "credit": "SachAI by ALT F4 // India"

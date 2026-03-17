@@ -1,0 +1,97 @@
+{
+  "app": {
+    "title": "सचAI",
+    "tagline": "تحليل جنائي متقدم للوسائط",
+    "subtitle": "SachAI by ALT F4 // 2026",
+    "unit": "وحدة الجنائيات العصبية",
+    "protection": "حماية الوسائط المعدلة رقمياً نشطة",
+    "startVerification": "بدء التحقق",
+    "systemActive": "النظام_نشط"
+  },
+  "nav": {
+    "origin": "المصدر",
+    "confidence": "الثقة",
+    "theme": "الموضوع"
+  },
+  "evidence": {
+    "title": "إدخال_الأدلة",
+    "clearUpload": "مسح الرفع"
+  },
+  "counter": {
+    "title": "الإجراءات المضادة",
+    "takedown": "إزالة من الويب",
+    "fileReport": "تقديم تقرير قانوني",
+    "downloadReport": "تنزيل التقرير",
+    "copyReport": "نسخ التقرير",
+    "copySuccess": "تم نسخ التقرير إلى الحافظة!",
+    "compare": "مقارنة",
+    "exportPDF": "تصدير PDF"
+  },
+  "analysis": {
+    "finalVerdict": "الحكم النهائي",
+    "sachaiScore": "درجة SachAi",
+    "technicalSummary": "الملخص التقني",
+    "circulationIntel": "استخبارات التداول العالمي",
+    "detectedAnomalies": "الشذوذات المكتشفة",
+    "osintTitle": "استخبارات OSINT والتداول",
+    "probableOrigin": "المصدر المحتمل",
+    "contentTheme": "موضوع المحتوى",
+    "osintConfidence": "ثقة OSINT",
+    "circulationChannels": "قنوات التداول المحتملة",
+    "scanning": "التحليل جارٍ",
+    "scanningNet": "مسح انتشار الشبكة...",
+    "frameOffset": "إزاحة الإطار",
+    "forensicPending": "المسح الجنائي قيد الانتظار",
+    "syntheticMedia": "الوسائط الاصطناعية"
+  },
+  "comparison": {
+    "title": "مقارنة التحليلات",
+    "selectFirst": "اختر التحليل الأول",
+    "selectSecond": "اختر التحليل الثاني",
+    "noAnalysis": "لا يوجد تحليل متاح. يرجى تحليل ملف وسائط أولاً.",
+    "verdict": "الحكم",
+    "score": "الدرجة",
+    "riskLevel": "مستوى الخطر",
+    "anomalies": "الشذوذات",
+    "origin": "المصدر",
+    "osintConfidence": "ثقة OSINT",
+    "close": "إغلاق",
+    "exportComparison": "تصدير المقارنة",
+    "analysis1": "التحليل أ",
+    "analysis2": "التحليل ب",
+    "delta": "الفرق",
+    "higher": "خطر أعلى",
+    "lower": "خطر أقل",
+    "same": "متساوٍ"
+  },
+  "shortcuts": {
+    "title": "اختصارات لوحة المفاتيح",
+    "upload": "فتح رفع الملف",
+    "download": "تنزيل التقرير الحالي",
+    "copy": "نسخ التقرير إلى الحافظة",
+    "copyComparison": "نسخ تقرير المقارنة",
+    "clear": "مسح جميع البيانات",
+    "help": "إظهار لوحة الاختصارات",
+    "close": "إغلاق"
+  },
+  "language": {
+    "select": "اللغة",
+    "en": "English",
+    "hi": "हिन्दी",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "zh": "中文",
+    "ja": "日本語",
+    "pt": "Português",
+    "ru": "Русский",
+    "ar": "العربية",
+    "ko": "한국어"
+  },
+  "footer": {
+    "credit": "SachAI by ALT F4 // الهند"
+  },
+  "errors": {
+    "scannerFailure": "فشل الماسح الضوئي"
+  }
+}
