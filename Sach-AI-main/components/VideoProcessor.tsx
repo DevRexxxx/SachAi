@@ -1,5 +1,4 @@
-import { runAgentPipeline } from "../agents/runAgentPipeline";
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useCallback } from 'react';
 import { VideoFrame } from '../types';
 
 interface VideoProcessorProps {
@@ -15,29 +14,56 @@ const VideoProcessor: React.FC<VideoProcessorProps> = ({ onFramesExtracted, onPr
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  const handleFileSelection = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-
+  const processFile = useCallback((file: File) => {
     if (previewUrl) URL.revokeObjectURL(previewUrl);
+
+    if (!file.type.startsWith('image/') && !file.type.startsWith('video/')) {
+      onError("Unsupported format. Use MP4, MOV, JPG, or PNG.");
+      return;
+    }
 
     const url = URL.createObjectURL(file);
     setSelectedFile(file);
     setPreviewUrl(url);
-    
+
     if (file.type.startsWith('image/')) {
       setFileType('image');
-    } else if (file.type.startsWith('video/')) {
-      setFileType('video');
     } else {
-      onError("Unsupported format. Use MP4, MOV, JPG, or PNG.");
-      setPreviewUrl(null);
-      setSelectedFile(null);
+      setFileType('video');
     }
+  }, [previewUrl, onError]);
+
+  const handleFileSelection = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    processFile(file);
+  };
+
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!isDragging) setIsDragging(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+
+    const file = e.dataTransfer.files?.[0];
+    if (!file) return;
+    processFile(file);
   };
 
   const handleMetadataLoaded = () => {
@@ -138,7 +164,12 @@ const VideoProcessor: React.FC<VideoProcessorProps> = ({ onFramesExtracted, onPr
   return (
     <div className="space-y-4">
       {!previewUrl ? (
-        <div className="flex flex-col items-center justify-center p-8 border-2 border-dashed border-slate-700 rounded-3xl bg-slate-800/20 hover:border-amber-500/50 hover:bg-slate-800/40 transition-all cursor-pointer group relative overflow-hidden">
+        <div
+          className={`flex flex-col items-center justify-center p-8 border-2 border-dashed rounded-3xl bg-slate-800/20 hover:border-amber-500/50 hover:bg-slate-800/40 transition-all cursor-pointer group relative overflow-hidden ${isDragging ? 'border-amber-500/80 bg-slate-800/50 scale-[1.01]' : 'border-slate-700'}`}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+        >
           <input
             type="file"
             accept="video/*,image/*"
@@ -147,13 +178,17 @@ const VideoProcessor: React.FC<VideoProcessorProps> = ({ onFramesExtracted, onPr
             disabled={isProcessing}
           />
           <div className="flex flex-col items-center pointer-events-none relative z-10">
-            <div className="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center mb-4 border border-slate-800 group-hover:border-amber-500/50 transition-colors shadow-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-slate-400 group-hover:text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className={`w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center mb-4 border transition-colors shadow-xl ${isDragging ? 'border-amber-500/80' : 'border-slate-800 group-hover:border-amber-500/50'}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" className={`h-8 w-8 transition-colors ${isDragging ? 'text-amber-500' : 'text-slate-400 group-hover:text-amber-500'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
               </svg>
             </div>
-            <p className="text-sm font-bold text-slate-200 uppercase tracking-widest text-center">Stage Media</p>
-            <p className="text-[10px] text-slate-500 mt-2 font-mono">JPG, PNG, MP4, MOV</p>
+            <p className="text-sm font-bold text-slate-200 uppercase tracking-widest text-center">
+              {isDragging ? 'Drop to Stage' : 'Stage Media'}
+            </p>
+            <p className="text-[10px] text-slate-500 mt-2 font-mono">
+              {isDragging ? 'Release to upload' : 'Drag & drop or click — JPG, PNG, MP4, MOV'}
+            </p>
           </div>
         </div>
       ) : (
