@@ -282,3 +282,96 @@ Accuracy and forensic rigor are critical.
     throw new Error(`FORENSIC_FAILURE: ${err.message || "Unknown error"}`);
   }
 };
+
+/* =========================================================
+       RESPONSE PARSER
+   ========================================================= */
+
+/**
+ * Parses raw text from the Gemini API into a structured AgentResult.
+ * Handles JSON extraction with a plain-text fallback.
+ */
+export const parseAnalysisResponse = (text: string) => {
+  try {
+    // Extract first complete JSON object by balancing braces
+    const start = text.indexOf("{");
+    let jsonMatch: string | null = null;
+    if (start !== -1) {
+      let depth = 0;
+      for (let i = start; i < text.length; i++) {
+        if (text[i] === "{") depth++;
+        else if (text[i] === "}") {
+          depth--;
+          if (depth === 0) { jsonMatch = text.slice(start, i + 1); break; }
+        }
+      }
+    }
+    if (jsonMatch) {
+      const parsed = JSON.parse(jsonMatch);
+      return {
+        isExplicit: parsed.isExplicit ?? false,
+        integrityScore: parsed.integrityScore ?? 50,
+        verdict: parsed.verdict ?? "ANALYZING",
+        summary: parsed.summary ?? "Analysis in progress",
+        explanation: parsed.explanation ?? text,
+        riskLevel: parsed.riskLevel ?? "Medium",
+        anomalies: parsed.anomalies ?? [],
+        safetyRecommendation: parsed.safetyRecommendation ?? "No specific recommendation",
+        forensicInsights: parsed.forensicInsights ?? [],
+        probableOrigin: parsed.probableOrigin,
+        contentTheme: parsed.contentTheme,
+        osintConfidence: parsed.osintConfidence,
+        circulationChannels: parsed.circulationChannels,
+      };
+    }
+
+    // Plain-text fallback
+    const isDeepfake = text.toLowerCase().includes("deepfake");
+    const isAuthentic = text.toLowerCase().includes("authentic");
+    return {
+      isExplicit: text.toLowerCase().includes("explicit") || text.toLowerCase().includes("ncii"),
+      integrityScore: isAuthentic ? 85 : 45,
+      verdict: isDeepfake ? "DEEPFAKE" : "SUSPICIOUS",
+      summary: text.substring(0, 200),
+      explanation: text,
+      riskLevel: (text.toLowerCase().includes("low") ? "Low" : text.toLowerCase().includes("high") ? "High" : "Medium") as "Low" | "Medium" | "High",
+      anomalies: [],
+      safetyRecommendation: "Verify through official channels",
+      forensicInsights: [],
+      probableOrigin: "Unknown",
+      contentTheme: "General",
+      osintConfidence: "Low",
+      circulationChannels: ["Unknown"],
+    };
+  } catch (error) {
+    console.error("Error parsing analysis response:", error);
+    return {
+      isExplicit: false,
+      integrityScore: 0,
+      verdict: "ERROR",
+      summary: "Analysis failed",
+      explanation: "Unable to process analysis response",
+      riskLevel: "High" as "Low" | "Medium" | "High",
+      anomalies: [],
+      safetyRecommendation: "Please try again",
+      forensicInsights: [],
+      probableOrigin: "Error",
+      contentTheme: "Error",
+      osintConfidence: "None",
+      circulationChannels: [],
+    };
+  }
+};
+
+/* =========================================================
+       SINGLE IMAGE ANALYSIS
+   ========================================================= */
+
+/**
+ * Analyzes a single image (provided as a dataUrl) for deepfake,
+ * AI-generated content, manipulation, or explicit material.
+ */
+export const analyzeImage = async (imageDataUrl: string) => {
+  const frame: VideoFrame = { timestamp: 0, dataUrl: imageDataUrl };
+  return analyzeVideoIntegrity([frame]);
+};

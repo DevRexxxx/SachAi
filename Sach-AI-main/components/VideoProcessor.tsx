@@ -126,7 +126,7 @@ const VideoProcessor: React.FC<VideoProcessorProps> = ({ onFramesExtracted, onPr
       canvas.width = video.videoWidth * scale;
       canvas.height = video.videoHeight * scale;
 
-      const totalFramesToExtract = Math.min(Math.floor(video.duration), 15);
+      const totalFramesToExtract = Math.min(Math.floor(video.duration), 30);
 
       for (let i = 0; i < totalFramesToExtract; i++) {
         video.currentTime = i;
