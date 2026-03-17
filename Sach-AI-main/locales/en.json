@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "सचAI",
+    "tagline": "Advanced Media Forensic Analysis",
+    "subtitle": "SachAI by ALT F4 // 2026",
+    "unit": "Neural Forensics Unit",
+    "protection": "Digitally Altered Media Protection Active",
+    "startVerification": "Start Verification",
+    "systemActive": "System_Active"
+  },
+  "nav": {
+    "origin": "Origin",
+    "confidence": "Confidence",
+    "theme": "Theme"
+  },
+  "evidence": {
+    "title": "Evidence_Input",
+    "clearUpload": "Clear Upload"
+  },
+  "counter": {
+    "title": "Counter Measures",
+    "takedown": "Takedown from Web",
+    "fileReport": "File Legal Report",
+    "downloadReport": "Download Report",
+    "copyReport": "Copy Report",
+    "copySuccess": "Report copied to clipboard!",
+    "compare": "Compare",
+    "exportPDF": "Export PDF"
+  },
+  "analysis": {
+    "finalVerdict": "Final Verdict",
+    "sachaiScore": "SachAi-Score",
+    "technicalSummary": "Technical Summary",
+    "circulationIntel": "Global Circulation Intel",
+    "detectedAnomalies": "Detected Anomalies",
+    "osintTitle": "OSINT & Circulation Intelligence",
+    "probableOrigin": "Probable Origin",
+    "contentTheme": "Content Theme",
+    "osintConfidence": "OSINT Confidence",
+    "circulationChannels": "Likely Circulation Channels",
+    "scanning": "Analysis In Progress",
+    "scanningNet": "Scanning Network Spread...",
+    "frameOffset": "Frame Offset",
+    "forensicPending": "Forensic Scan Pending",
+    "syntheticMedia": "Synthetic Media"
+  },
+  "comparison": {
+    "title": "Analysis Comparison",
+    "selectFirst": "Select First Analysis",
+    "selectSecond": "Select Second Analysis",
+    "noAnalysis": "No analysis available. Please analyze a media file first.",
+    "verdict": "Verdict",
+    "score": "Score",
+    "riskLevel": "Risk Level",
+    "anomalies": "Anomalies",
+    "origin": "Origin",
+    "osintConfidence": "OSINT Confidence",
+    "close": "Close",
+    "exportComparison": "Export Comparison",
+    "analysis1": "Analysis A",
+    "analysis2": "Analysis B",
+    "delta": "Delta",
+    "higher": "Higher Risk",
+    "lower": "Lower Risk",
+    "same": "Same"
+  },
+  "shortcuts": {
+    "title": "Keyboard Shortcuts",
+    "upload": "Open file upload",
+    "download": "Download current report",
+    "copy": "Copy report to clipboard",
+    "copyComparison": "Copy comparison report",
+    "clear": "Clear all data",
+    "help": "Show this shortcuts panel",
+    "close": "Close"
+  },
+  "language": {
+    "select": "Language",
+    "en": "English",
+    "hi": "हिन्दी",
+    "es": "Español"
+  },
+  "footer": {
+    "credit": "SachAI by ALT F4 // India"
+  },
+  "errors": {
+    "scannerFailure": "Scanner Failure"
+  }
+}

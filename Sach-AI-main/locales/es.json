@@ -1,0 +1,89 @@
+{
+  "app": {
+    "title": "सचAI",
+    "tagline": "Análisis Forense de Medios Avanzado",
+    "subtitle": "SachAI by ALT F4 // 2026",
+    "unit": "Unidad de Forenses Neurales",
+    "protection": "Protección de Medios Alterados Digitalmente Activa",
+    "startVerification": "Iniciar Verificación",
+    "systemActive": "Sistema_Activo"
+  },
+  "nav": {
+    "origin": "Origen",
+    "confidence": "Confianza",
+    "theme": "Tema"
+  },
+  "evidence": {
+    "title": "Entrada_Evidencia",
+    "clearUpload": "Borrar Carga"
+  },
+  "counter": {
+    "title": "Contra Medidas",
+    "takedown": "Eliminar de la Web",
+    "fileReport": "Presentar Informe Legal",
+    "downloadReport": "Descargar Informe",
+    "copyReport": "Copiar Informe",
+    "copySuccess": "¡Informe copiado al portapapeles!",
+    "compare": "Comparar",
+    "exportPDF": "Exportar PDF"
+  },
+  "analysis": {
+    "finalVerdict": "Veredicto Final",
+    "sachaiScore": "Puntuación SachAi",
+    "technicalSummary": "Resumen Técnico",
+    "circulationIntel": "Intel de Circulación Global",
+    "detectedAnomalies": "Anomalías Detectadas",
+    "osintTitle": "Inteligencia OSINT y de Circulación",
+    "probableOrigin": "Origen Probable",
+    "contentTheme": "Tema del Contenido",
+    "osintConfidence": "Confianza OSINT",
+    "circulationChannels": "Canales de Circulación Probables",
+    "scanning": "Análisis en Progreso",
+    "scanningNet": "Escaneando Difusión en Red...",
+    "frameOffset": "Desplazamiento de Fotograma",
+    "forensicPending": "Escaneo Forense Pendiente",
+    "syntheticMedia": "Medios Sintéticos"
+  },
+  "comparison": {
+    "title": "Comparación de Análisis",
+    "selectFirst": "Seleccionar Primer Análisis",
+    "selectSecond": "Seleccionar Segundo Análisis",
+    "noAnalysis": "No hay análisis disponible. Por favor, analice un archivo de medios primero.",
+    "verdict": "Veredicto",
+    "score": "Puntuación",
+    "riskLevel": "Nivel de Riesgo",
+    "anomalies": "Anomalías",
+    "origin": "Origen",
+    "osintConfidence": "Confianza OSINT",
+    "close": "Cerrar",
+    "exportComparison": "Exportar Comparación",
+    "analysis1": "Análisis A",
+    "analysis2": "Análisis B",
+    "delta": "Delta",
+    "higher": "Mayor Riesgo",
+    "lower": "Menor Riesgo",
+    "same": "Igual"
+  },
+  "shortcuts": {
+    "title": "Atajos de Teclado",
+    "upload": "Abrir carga de archivo",
+    "download": "Descargar informe actual",
+    "copy": "Copiar informe al portapapeles",
+    "copyComparison": "Copiar informe de comparación",
+    "clear": "Borrar todos los datos",
+    "help": "Mostrar este panel de atajos",
+    "close": "Cerrar"
+  },
+  "language": {
+    "select": "Idioma",
+    "en": "English",
+    "hi": "हिन्दी",
+    "es": "Español"
+  },
+  "footer": {
+    "credit": "SachAI by ALT F4 // India"
+  },
+  "errors": {
+    "scannerFailure": "Falla del Escáner"
+  }
+}
