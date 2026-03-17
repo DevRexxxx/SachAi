@@ -386,14 +386,14 @@ const App: React.FC = () => {
 
               {analysis && (
                 <div className="flex-1 hidden xl:flex items-center justify-center gap-10 px-8 py-2 bg-white/[0.03] rounded-full border border-white/10">
-                  <div className="flex flex-col"><span className="text-[7px] font-black opacity-30 uppercase tracking-[0.3em]">{t('nav.origin')}</span><span className="text-[10px] font-bold text-violet-400">{analysis.probableOrigin || 'Scanning...'}</span></div>
+                  <div className="flex flex-col"><span className="text-[7px] font-black opacity-30 uppercase tracking-[0.3em]">{t('nav.origin')}</span><span className="text-[10px] font-bold text-violet-400">{analysis?.probableOrigin || 'Scanning...'}</span></div>
                   <div className="w-[1px] h-4 bg-white/10" />
                   <div className="flex flex-col">
                     <span className="text-[7px] font-black opacity-30 uppercase tracking-[0.3em]">{t('nav.confidence')}</span>
-                    <span className={`text-[10px] font-black uppercase ${theme.text}`}>{analysis.osintConfidence || 'Pending'}</span>
+                    <span className={`text-[10px] font-black uppercase ${theme.text}`}>{analysis?.osintConfidence || 'Pending'}</span>
                   </div>
                   <div className="w-[1px] h-4 bg-white/10" />
-                  <div className="flex flex-col"><span className="text-[7px] font-black opacity-30 uppercase tracking-[0.3em]">{t('nav.theme')}</span><span className="text-[10px] font-bold text-white/80">{analysis.contentTheme || 'General'}</span></div>
+                  <div className="flex flex-col"><span className="text-[7px] font-black opacity-30 uppercase tracking-[0.3em]">{t('nav.theme')}</span><span className="text-[10px] font-bold text-white/80">{analysis?.contentTheme || 'General'}</span></div>
                 </div>
               )}
               <div className="flex items-center gap-3">
@@ -419,7 +419,7 @@ const App: React.FC = () => {
                 ) : (
                   <div className="space-y-6">
                     <div className={`aspect-video rounded-xl overflow-hidden border border-white/10 relative bg-black/40 ${status === AppStatus.ANALYZING ? 'scanning-overlay' : ''}`}>
-                      <img src={frames[0]?.dataUrl} className="w-full h-full object-contain" alt="Evidence" />
+                  <img src={frames[0]?.dataUrl ?? ''} className="w-full h-full object-contain" alt="Evidence" />
                     </div>
                     <button onClick={handleClearUpload} className="w-full py-3 text-[10px] font-black uppercase tracking-widest border border-white/10 rounded-lg hover:bg-white/5 transition-all text-zinc-400 hover:text-white">{t('evidence.clearUpload')}</button>
                   </div>
@@ -555,21 +555,21 @@ const App: React.FC = () => {
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="glass-card p-6 rounded-2xl border border-white/5 text-center">
                               <p className="text-[9px] font-black opacity-40 uppercase tracking-widest mb-4">{t('analysis.probableOrigin')}</p>
-                              <p className="text-xs font-medium text-zinc-200">{analysis.probableOrigin || t('analysis.forensicPending')}</p>
+                              <p className="text-xs font-medium text-zinc-200">{analysis?.probableOrigin || t('analysis.forensicPending')}</p>
                             </div>
                             <div className="glass-card p-6 rounded-2xl border border-white/5 text-center">
                               <p className="text-[9px] font-black opacity-40 uppercase tracking-widest mb-4">{t('analysis.contentTheme')}</p>
-                              <p className="text-xs font-bold text-white">{analysis.contentTheme || t('analysis.syntheticMedia')}</p>
+                              <p className="text-xs font-bold text-white">{analysis?.contentTheme || t('analysis.syntheticMedia')}</p>
                             </div>
                             <div className="glass-card p-6 rounded-2xl border border-white/5 text-center">
                               <p className="text-[9px] font-black opacity-40 uppercase tracking-widest mb-4">{t('analysis.osintConfidence')}</p>
-                              <p className={`text-lg font-black transition-colors duration-1000 ${theme.text}`}>{analysis.osintConfidence || 'Low'}</p>
+                              <p className={`text-lg font-black transition-colors duration-1000 ${theme.text}`}>{analysis?.osintConfidence || 'Low'}</p>
                             </div>
                           </div>
                           <div className="glass-card p-6 rounded-2xl border border-white/5">
                             <p className="text-[9px] font-black opacity-40 uppercase tracking-widest mb-4">{t('analysis.circulationChannels')}</p>
                             <div className="flex flex-wrap gap-3">
-                              {(analysis.circulationChannels && analysis.circulationChannels.length > 0 ? analysis.circulationChannels : ['Telegram', 'X/Twitter', 'Instagram', 'Reddit']).map((ch, i) => (
+                              {((analysis?.circulationChannels?.length ?? 0) > 0 ? analysis!.circulationChannels! : ['Telegram', 'X/Twitter', 'Instagram', 'Reddit']).map((ch, i) => (
                                 <span key={i} className="px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest bg-white/5 border border-white/10 text-zinc-300 hover:bg-white/10 transition-all">{ch}</span>
                               ))}
                             </div>

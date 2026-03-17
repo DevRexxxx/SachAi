@@ -43,9 +43,9 @@ const FieldRow: React.FC<{ label: string; v1: string; v2: string; highlight?: bo
 const ComparisonTool: React.FC<ComparisonToolProps> = ({ analyses, onClose, onToast }) => {
   const { t } = useTranslation();
   const [idx1, setIdx1] = React.useState(0);
-  const [idx2, setIdx2] = React.useState(Math.min(1, analyses.length - 1));
+  const [idx2, setIdx2] = React.useState(analyses.length >= 2 ? 1 : 0);
 
-  if (analyses.length === 0) {
+  if (analyses.length < 2) {
     return (
       <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 backdrop-blur-xl p-4">
         <div className="glass-card rounded-3xl p-8 max-w-md w-full text-center border border-white/10">
@@ -58,8 +58,21 @@ const ComparisonTool: React.FC<ComparisonToolProps> = ({ analyses, onClose, onTo
     );
   }
 
-  const a1 = analyses[idx1];
-  const a2 = analyses[idx2];
+  const a1 = analyses[Math.min(idx1, analyses.length - 1)];
+  const a2 = analyses[Math.min(idx2, analyses.length - 1)];
+
+  if (!a1 || !a2) {
+    return (
+      <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 backdrop-blur-xl p-4">
+        <div className="glass-card rounded-3xl p-8 max-w-md w-full text-center border border-white/10">
+          <p className="text-sm text-zinc-400">{t('comparison.noAnalysis')}</p>
+          <button onClick={onClose} className="mt-6 px-6 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-black uppercase tracking-widest text-zinc-300 hover:bg-white/10 transition-all">
+            {t('comparison.close')}
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   const getVerdictColor = (a: AgentResult) => {
     const v = a.verdict.toUpperCase();
