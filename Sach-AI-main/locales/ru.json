@@ -1,0 +1,97 @@
+{
+  "app": {
+    "title": "सचAI",
+    "tagline": "Расширенный Судебно-медицинский Анализ Медиа",
+    "subtitle": "SachAI by ALT F4 // 2026",
+    "unit": "Нейронный Судебно-медицинский Блок",
+    "protection": "Защита от цифрово изменённых медиа активна",
+    "startVerification": "Начать проверку",
+    "systemActive": "Система_Активна"
+  },
+  "nav": {
+    "origin": "Происхождение",
+    "confidence": "Уверенность",
+    "theme": "Тема"
+  },
+  "evidence": {
+    "title": "Ввод_Доказательств",
+    "clearUpload": "Очистить загрузку"
+  },
+  "counter": {
+    "title": "Контрмеры",
+    "takedown": "Удалить из сети",
+    "fileReport": "Подать юридический отчёт",
+    "downloadReport": "Скачать отчёт",
+    "copyReport": "Копировать отчёт",
+    "copySuccess": "Отчёт скопирован в буфер обмена!",
+    "compare": "Сравнить",
+    "exportPDF": "Экспорт в PDF"
+  },
+  "analysis": {
+    "finalVerdict": "Окончательный вердикт",
+    "sachaiScore": "Оценка SachAi",
+    "technicalSummary": "Технический обзор",
+    "circulationIntel": "Глобальный разведывательный анализ распространения",
+    "detectedAnomalies": "Обнаруженные аномалии",
+    "osintTitle": "Разведка OSINT и распространения",
+    "probableOrigin": "Вероятное происхождение",
+    "contentTheme": "Тема контента",
+    "osintConfidence": "Уверенность OSINT",
+    "circulationChannels": "Вероятные каналы распространения",
+    "scanning": "Анализ в процессе",
+    "scanningNet": "Сканирование сетевого распространения...",
+    "frameOffset": "Смещение кадра",
+    "forensicPending": "Судебно-медицинское сканирование ожидается",
+    "syntheticMedia": "Синтетические медиа"
+  },
+  "comparison": {
+    "title": "Сравнение анализов",
+    "selectFirst": "Выбрать первый анализ",
+    "selectSecond": "Выбрать второй анализ",
+    "noAnalysis": "Нет доступного анализа. Пожалуйста, сначала проанализируйте медиафайл.",
+    "verdict": "Вердикт",
+    "score": "Оценка",
+    "riskLevel": "Уровень риска",
+    "anomalies": "Аномалии",
+    "origin": "Происхождение",
+    "osintConfidence": "Уверенность OSINT",
+    "close": "Закрыть",
+    "exportComparison": "Экспорт сравнения",
+    "analysis1": "Анализ A",
+    "analysis2": "Анализ B",
+    "delta": "Дельта",
+    "higher": "Выше риск",
+    "lower": "Ниже риск",
+    "same": "Одинаково"
+  },
+  "shortcuts": {
+    "title": "Сочетания клавиш",
+    "upload": "Открыть загрузку файла",
+    "download": "Скачать текущий отчёт",
+    "copy": "Скопировать отчёт в буфер обмена",
+    "copyComparison": "Скопировать отчёт сравнения",
+    "clear": "Очистить все данные",
+    "help": "Показать эту панель сочетаний клавиш",
+    "close": "Закрыть"
+  },
+  "language": {
+    "select": "Язык",
+    "en": "English",
+    "hi": "हिन्दी",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "zh": "中文",
+    "ja": "日本語",
+    "pt": "Português",
+    "ru": "Русский",
+    "ar": "العربية",
+    "ko": "한국어"
+  },
+  "footer": {
+    "credit": "SachAI by ALT F4 // Индия"
+  },
+  "errors": {
+    "scannerFailure": "Сбой сканера"
+  }
+}

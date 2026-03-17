@@ -5,6 +5,14 @@ const LANGUAGES = [
   { code: 'en', label: 'EN' },
   { code: 'hi', label: 'HI' },
   { code: 'es', label: 'ES' },
+  { code: 'fr', label: 'FR' },
+  { code: 'de', label: 'DE' },
+  { code: 'zh', label: 'ZH' },
+  { code: 'ja', label: 'JA' },
+  { code: 'pt', label: 'PT' },
+  { code: 'ru', label: 'RU' },
+  { code: 'ar', label: 'AR' },
+  { code: 'ko', label: 'KO' },
 ] as const;
 
 const LanguageSwitcher: React.FC = () => {
@@ -12,7 +20,7 @@ const LanguageSwitcher: React.FC = () => {
   const current = i18n.language;
 
   return (
-    <div className="flex items-center gap-1 px-2 py-1 bg-white/5 rounded-lg border border-white/10">
+    <div className="flex flex-wrap items-center gap-1 px-2 py-1 bg-white/5 rounded-lg border border-white/10">
       {LANGUAGES.map((lang) => (
         <button
           key={lang.code}

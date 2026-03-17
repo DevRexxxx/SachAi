@@ -108,7 +108,7 @@ const scannerStyles = `
 `;
 
 const App: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isLanding, setIsLanding] = useState(true);
   const [status, setStatus] = useState<AppStatus>(AppStatus.IDLE);
   const [progress, setProgress] = useState(0);
@@ -255,7 +255,7 @@ const App: React.FC = () => {
     }, 80);
 
     try {
-      const result = await analyzeVideoIntegrity(extractedFrames);
+      const result = await analyzeVideoIntegrity(extractedFrames, i18n.language);
       if (intervalRef.current) clearInterval(intervalRef.current);
       const agentResult = result as AgentResult;
       setProgress(100); setAnalysis(agentResult); setStatus(AppStatus.COMPLETED);
