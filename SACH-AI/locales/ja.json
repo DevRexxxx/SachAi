@@ -1,0 +1,97 @@
+{
+  "app": {
+    "title": "सचAI",
+    "tagline": "高度なメディア法科学分析",
+    "subtitle": "SachAI Core // 2026",
+    "unit": "ニューラル法科学ユニット",
+    "protection": "デジタル改ざんメディア保護が有効",
+    "startVerification": "検証を開始",
+    "systemActive": "システム_稼働中"
+  },
+  "nav": {
+    "origin": "出所",
+    "confidence": "信頼度",
+    "theme": "テーマ"
+  },
+  "evidence": {
+    "title": "証拠_入力",
+    "clearUpload": "アップロードをクリア"
+  },
+  "counter": {
+    "title": "対策",
+    "takedown": "ウェブから削除",
+    "fileReport": "法的レポートを提出",
+    "downloadReport": "レポートをダウンロード",
+    "copyReport": "レポートをコピー",
+    "copySuccess": "レポートをクリップボードにコピーしました！",
+    "compare": "比較",
+    "exportPDF": "PDF としてエクスポート"
+  },
+  "analysis": {
+    "finalVerdict": "最終判定",
+    "sachaiScore": "SachAi スコア",
+    "technicalSummary": "技術的概要",
+    "circulationIntel": "グローバル流通インテリジェンス",
+    "detectedAnomalies": "検出された異常",
+    "osintTitle": "OSINT と流通インテリジェンス",
+    "probableOrigin": "推定出所",
+    "contentTheme": "コンテンツテーマ",
+    "osintConfidence": "OSINT 信頼度",
+    "circulationChannels": "流通チャネルの可能性",
+    "scanning": "分析中",
+    "scanningNet": "ネットワーク拡散をスキャン中...",
+    "frameOffset": "フレームオフセット",
+    "forensicPending": "法科学スキャン保留中",
+    "syntheticMedia": "合成メディア"
+  },
+  "comparison": {
+    "title": "分析比較",
+    "selectFirst": "最初の分析を選択",
+    "selectSecond": "2番目の分析を選択",
+    "noAnalysis": "分析がありません。まずメディアファイルを分析してください。",
+    "verdict": "判定",
+    "score": "スコア",
+    "riskLevel": "リスクレベル",
+    "anomalies": "異常",
+    "origin": "出所",
+    "osintConfidence": "OSINT 信頼度",
+    "close": "閉じる",
+    "exportComparison": "比較をエクスポート",
+    "analysis1": "分析 A",
+    "analysis2": "分析 B",
+    "delta": "デルタ",
+    "higher": "リスク高",
+    "lower": "リスク低",
+    "same": "同じ"
+  },
+  "shortcuts": {
+    "title": "キーボードショートカット",
+    "upload": "ファイルアップロードを開く",
+    "download": "現在のレポートをダウンロード",
+    "copy": "レポートをクリップボードにコピー",
+    "copyComparison": "比較レポートをコピー",
+    "clear": "すべてのデータをクリア",
+    "help": "このショートカットパネルを表示",
+    "close": "閉じる"
+  },
+  "language": {
+    "select": "言語",
+    "en": "English",
+    "hi": "हिन्दी",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "zh": "中文",
+    "ja": "日本語",
+    "pt": "Português",
+    "ru": "Русский",
+    "ar": "العربية",
+    "ko": "한국어"
+  },
+  "footer": {
+    "credit": "SachAI Core // インド"
+  },
+  "errors": {
+    "scannerFailure": "スキャナー障害"
+  }
+}

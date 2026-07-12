@@ -1,0 +1,18 @@
+# Local ML Models
+*.pth
+*.pt
+
+# Jupyter Notebooks
+*.ipynb
+
+# Datasets
+backend/dataset/
+dataset/
+
+# Python Virtual Environments
+venv/
+.env
+
+# HuggingFace Cache and Local Models
+backend/model_cache/
+backend/models/

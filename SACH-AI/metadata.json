@@ -1,0 +1,8 @@
+{
+  "name": "sachAI Forensic Analyzer",
+  "description": "The ultimate truth engine. A sophisticated digital forensic tool for deepfake detection in photos and videos.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

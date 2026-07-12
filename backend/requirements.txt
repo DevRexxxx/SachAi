@@ -1,0 +1,13 @@
+torch
+torchvision
+Flask
+Flask-Cors
+Pillow
+numpy
+kaggle
+scipy
+transformers
+einops
+accelerate
+facenet-pytorch
+requests

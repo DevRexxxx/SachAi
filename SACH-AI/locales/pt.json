@@ -1,0 +1,97 @@
+{
+  "app": {
+    "title": "सचAI",
+    "tagline": "Análise Forense de Mídia Avançada",
+    "subtitle": "SachAI Core // 2026",
+    "unit": "Unidade de Forense Neural",
+    "protection": "Proteção de Mídia Alterada Digitalmente Ativa",
+    "startVerification": "Iniciar Verificação",
+    "systemActive": "Sistema_Ativo"
+  },
+  "nav": {
+    "origin": "Origem",
+    "confidence": "Confiança",
+    "theme": "Tema"
+  },
+  "evidence": {
+    "title": "Entrada_Evidência",
+    "clearUpload": "Limpar Upload"
+  },
+  "counter": {
+    "title": "Contramedidas",
+    "takedown": "Remover da Web",
+    "fileReport": "Registrar Relatório Legal",
+    "downloadReport": "Baixar Relatório",
+    "copyReport": "Copiar Relatório",
+    "copySuccess": "Relatório copiado para a área de transferência!",
+    "compare": "Comparar",
+    "exportPDF": "Exportar PDF"
+  },
+  "analysis": {
+    "finalVerdict": "Veredicto Final",
+    "sachaiScore": "Pontuação SachAi",
+    "technicalSummary": "Resumo Técnico",
+    "circulationIntel": "Inteligência de Circulação Global",
+    "detectedAnomalies": "Anomalias Detectadas",
+    "osintTitle": "Inteligência OSINT e de Circulação",
+    "probableOrigin": "Origem Provável",
+    "contentTheme": "Tema do Conteúdo",
+    "osintConfidence": "Confiança OSINT",
+    "circulationChannels": "Canais de Circulação Prováveis",
+    "scanning": "Análise em Andamento",
+    "scanningNet": "Escaneando Difusão na Rede...",
+    "frameOffset": "Deslocamento de Quadro",
+    "forensicPending": "Varredura Forense Pendente",
+    "syntheticMedia": "Mídia Sintética"
+  },
+  "comparison": {
+    "title": "Comparação de Análises",
+    "selectFirst": "Selecionar Primeira Análise",
+    "selectSecond": "Selecionar Segunda Análise",
+    "noAnalysis": "Nenhuma análise disponível. Por favor, analise um arquivo de mídia primeiro.",
+    "verdict": "Veredicto",
+    "score": "Pontuação",
+    "riskLevel": "Nível de Risco",
+    "anomalies": "Anomalias",
+    "origin": "Origem",
+    "osintConfidence": "Confiança OSINT",
+    "close": "Fechar",
+    "exportComparison": "Exportar Comparação",
+    "analysis1": "Análise A",
+    "analysis2": "Análise B",
+    "delta": "Delta",
+    "higher": "Risco Maior",
+    "lower": "Risco Menor",
+    "same": "Igual"
+  },
+  "shortcuts": {
+    "title": "Atalhos de Teclado",
+    "upload": "Abrir upload de arquivo",
+    "download": "Baixar relatório atual",
+    "copy": "Copiar relatório para área de transferência",
+    "copyComparison": "Copiar relatório de comparação",
+    "clear": "Limpar todos os dados",
+    "help": "Mostrar este painel de atalhos",
+    "close": "Fechar"
+  },
+  "language": {
+    "select": "Idioma",
+    "en": "English",
+    "hi": "हिन्दी",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "zh": "中文",
+    "ja": "日本語",
+    "pt": "Português",
+    "ru": "Русский",
+    "ar": "العربية",
+    "ko": "한국어"
+  },
+  "footer": {
+    "credit": "SachAI Core // Índia"
+  },
+  "errors": {
+    "scannerFailure": "Falha do Scanner"
+  }
+}

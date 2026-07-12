@@ -1,0 +1,97 @@
+{
+  "app": {
+    "title": "सचAI",
+    "tagline": "高级媒体法证分析",
+    "subtitle": "SachAI Core // 2026",
+    "unit": "神经法证单元",
+    "protection": "数字篡改媒体保护已激活",
+    "startVerification": "开始验证",
+    "systemActive": "系统_运行中"
+  },
+  "nav": {
+    "origin": "来源",
+    "confidence": "置信度",
+    "theme": "主题"
+  },
+  "evidence": {
+    "title": "证据_输入",
+    "clearUpload": "清除上传"
+  },
+  "counter": {
+    "title": "对抗措施",
+    "takedown": "从网络删除",
+    "fileReport": "提交法律报告",
+    "downloadReport": "下载报告",
+    "copyReport": "复制报告",
+    "copySuccess": "报告已复制到剪贴板！",
+    "compare": "比较",
+    "exportPDF": "导出 PDF"
+  },
+  "analysis": {
+    "finalVerdict": "最终裁决",
+    "sachaiScore": "SachAi 评分",
+    "technicalSummary": "技术摘要",
+    "circulationIntel": "全球传播情报",
+    "detectedAnomalies": "检测到的异常",
+    "osintTitle": "OSINT 与传播情报",
+    "probableOrigin": "可能来源",
+    "contentTheme": "内容主题",
+    "osintConfidence": "OSINT 置信度",
+    "circulationChannels": "可能的传播渠道",
+    "scanning": "分析进行中",
+    "scanningNet": "正在扫描网络传播...",
+    "frameOffset": "帧偏移",
+    "forensicPending": "法证扫描待处理",
+    "syntheticMedia": "合成媒体"
+  },
+  "comparison": {
+    "title": "分析比较",
+    "selectFirst": "选择第一个分析",
+    "selectSecond": "选择第二个分析",
+    "noAnalysis": "没有可用的分析。请先分析一个媒体文件。",
+    "verdict": "裁决",
+    "score": "评分",
+    "riskLevel": "风险级别",
+    "anomalies": "异常",
+    "origin": "来源",
+    "osintConfidence": "OSINT 置信度",
+    "close": "关闭",
+    "exportComparison": "导出比较",
+    "analysis1": "分析 A",
+    "analysis2": "分析 B",
+    "delta": "差值",
+    "higher": "风险更高",
+    "lower": "风险更低",
+    "same": "相同"
+  },
+  "shortcuts": {
+    "title": "键盘快捷键",
+    "upload": "打开文件上传",
+    "download": "下载当前报告",
+    "copy": "复制报告到剪贴板",
+    "copyComparison": "复制比较报告",
+    "clear": "清除所有数据",
+    "help": "显示此快捷键面板",
+    "close": "关闭"
+  },
+  "language": {
+    "select": "语言",
+    "en": "English",
+    "hi": "हिन्दी",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "zh": "中文",
+    "ja": "日本語",
+    "pt": "Português",
+    "ru": "Русский",
+    "ar": "العربية",
+    "ko": "한국어"
+  },
+  "footer": {
+    "credit": "SachAI Core // 印度"
+  },
+  "errors": {
+    "scannerFailure": "扫描器故障"
+  }
+}
