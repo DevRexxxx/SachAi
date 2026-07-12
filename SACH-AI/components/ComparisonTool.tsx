@@ -76,8 +76,10 @@ const ComparisonTool: React.FC<ComparisonToolProps> = ({ analyses, onClose, onTo
 
   const getVerdictColor = (a: AgentResult) => {
     const v = a.verdict.toUpperCase();
+    const grayKeywords = ['UNCLASSIFIED', 'UNKNOWN'];
     const redKeywords = ['DEEPFAKE', 'AI', 'SYNTHETIC', 'MANIPULATED', 'COMPOSITE', 'GENERATED', 'NCII', 'ALTERED', 'DIGITAL', 'FAKE', 'FABRICATED', 'SATIRICAL', 'MANIPULATION'];
     const yellowKeywords = ['SUSPICIOUS', 'INCONSISTENT', 'ARTIFACT', 'UNCERTAIN'];
+    if (grayKeywords.some(k => v.includes(k))) return 'text-slate-400';
     if (redKeywords.some(k => v.includes(k)) || a.isExplicit) return 'text-red-400';
     if (yellowKeywords.some(k => v.includes(k))) return 'text-yellow-400';
     return 'text-emerald-400';
@@ -85,8 +87,10 @@ const ComparisonTool: React.FC<ComparisonToolProps> = ({ analyses, onClose, onTo
 
   const getScoreHex = (a: AgentResult) => {
     const v = a.verdict.toUpperCase();
+    const grayKeywords = ['UNCLASSIFIED', 'UNKNOWN'];
     const redKeywords = ['DEEPFAKE', 'AI', 'SYNTHETIC', 'MANIPULATED', 'COMPOSITE', 'GENERATED', 'NCII', 'ALTERED', 'DIGITAL', 'FAKE', 'FABRICATED', 'SATIRICAL', 'MANIPULATION'];
     const yellowKeywords = ['SUSPICIOUS', 'INCONSISTENT', 'ARTIFACT', 'UNCERTAIN'];
+    if (grayKeywords.some(k => v.includes(k))) return '#94a3b8';
     if (redKeywords.some(k => v.includes(k)) || a.isExplicit) return '#ef4444';
     if (yellowKeywords.some(k => v.includes(k))) return '#eab308';
     return '#10b981';

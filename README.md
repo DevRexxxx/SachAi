@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-4.0.0-blueviolet?style=flat-square" />
+  <img src="https://img.shields.io/badge/version-5.0.0-blueviolet?style=flat-square" />
   <img src="https://img.shields.io/badge/react-19-61dafb?style=flat-square&logo=react" />
   <img src="https://img.shields.io/badge/typescript-5-3178c6?style=flat-square&logo=typescript" />
   <img src="https://img.shields.io/badge/vite-6-646CFF?style=flat-square&logo=vite" />
@@ -94,8 +94,7 @@ SachAi/
 │   ├── requirements.txt           # Python backend dependencies
 │   ├── train.py                   # PyTorch CNN model training script
 │   ├── download_kaggle.py         # Utility script to download datasets
-│   ├── Dockerfile                 # Docker configuration for backend server
-│   └── verify_fix.py              # Script to verify model fixes
+│   └── Dockerfile                 # Docker configuration for backend server
 │
 ├── SACH-AI/                       # React Frontend Application
 │   ├── index.html                 # Vite HTML entrypoint
@@ -132,9 +131,6 @@ SachAi/
 │   ├── neutral/
 │   ├── sad/
 │   └── surprise/
-│
-├── extract.py                     # Script to extract code/models
-└── extracted_code.py              # Extracted analysis functions
 ```
 
 ---
@@ -216,6 +212,7 @@ SachAi/
 | **Authentic Glow** | Emerald Green | `#064e3b` | Authentic verdict theme background |
 | **Suspicious Glow** | Warm Amber | `#facc15` | Suspicious verdict theme background |
 | **Deepfake Glow** | Crimson Red | `#b91c1c` | Deepfake/Altered verdict theme background |
+| **Unclassified Glow** | Slate Gray | `#334155` | Unclassified / Unknown verdict theme background |
 
 ### Glassmorphism Theme
 
@@ -332,7 +329,8 @@ Open [http://localhost:5173](http://localhost:5173) in your browser. Ensure the 
 
 | Version | Highlights |
 |---|---|
-| **v4.0.0** | **Domain Shift & Inference Optimizations (Current)**<br/>• Migrated to a dynamic highly-optimized rule-based forensic explanation engine.<br/>• Solved deepfake mathematical scoring flaw using `torch.min` bounding logic.<br/>• Fine-tuned the EfficientNetV2 model with extreme dataset augmentations to combat domain shift.<br/>• Refined MTCNN detection thresholds for heavily compressed TV broadcast inputs. |
+| **v5.0.0** | **Structural Refinement & Dynamic UI Enhancements (Current)**<br/>• Reorganized project structure and deleted unused extraction/debug scripts.<br/>• Introduced the `Slate/Gray` Glassmorphic theme for `Unclassified` and `Unknown` media verdicts.<br/>• Refined analysis output rendering colors across Comparison Tools. |
+| **v4.0.0** | **Domain Shift & Inference Optimizations**<br/>• Migrated to a dynamic highly-optimized rule-based forensic explanation engine.<br/>• Solved deepfake mathematical scoring flaw using `torch.min` bounding logic.<br/>• Fine-tuned the EfficientNetV2 model with extreme dataset augmentations to combat domain shift.<br/>• Refined MTCNN detection thresholds for heavily compressed TV broadcast inputs. |
 | **v3.0.0** | **Generative VLM Core**<br/>• Upgraded engine with **Moondream2 (VLM)** for textual forensic descriptions.<br/>• Solved precision compatibility issues (`float16` for VLM, `float32` for CNN).<br/>• Created the dynamic glassmorphic interface reacting to real-time analysis verdicts. |
 | **v2.0.0** | **Offline Scoring Engine**<br/>• Integrated locally trained EfficientNetV2 CNN model for binary classification scoring.<br/>• Set up the MTCNN face detector for automated face cropping and region profiling. |
 | **v1.0.0** | **Base Structure**<br/>• Configured the React dashboard, video frame extractor, and pdf reports. |

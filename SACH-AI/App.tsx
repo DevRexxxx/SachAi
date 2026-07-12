@@ -62,6 +62,10 @@ const scannerStyles = `
     background: radial-gradient(circle at 50% 0%, #064e3b 0%, #020204 80%) !important; 
     --glass: rgba(0, 255, 0, 0.04); --border: rgba(0, 255, 0, 0.3);
   }
+  .theme-gray { 
+    background: radial-gradient(circle at 50% 0%, #334155 0%, #020204 80%) !important; 
+    --glass: rgba(255, 255, 255, 0.04); --border: rgba(255, 255, 255, 0.2);
+  }
 
   .glass-card {
     background: var(--glass);
@@ -133,11 +137,21 @@ const App: React.FC = () => {
     
     const verdictStr = analysis.verdict.toUpperCase();
     
+    const grayKeywords = ['UNCLASSIFIED', 'UNKNOWN', 'ERROR'];
+    const isGray = grayKeywords.some(keyword => verdictStr.includes(keyword));
+
     const redKeywords = ['DEEPFAKE', 'AI', 'SYNTHETIC', 'MANIPULATED', 'COMPOSITE', 'GENERATED', 'NCII', 'ALTERED','DIGITAL', 'FAKE', 'FABRICATED', 'SATIRICAL', 'MANIPULATION'];
     const isRed = redKeywords.some(keyword => verdictStr.includes(keyword)) || analysis.isExplicit;
 
     const yellowKeywords = ['SUSPICIOUS', 'UNAUTHENTIC', 'INCONSISTENT', 'ARTIFACT', 'UNCERTAIN'];
     const isYellow = yellowKeywords.some(keyword => verdictStr.includes(keyword));
+
+    if (isGray) return {
+      class: 'theme-gray',
+      border: 'border-slate-500/30',
+      text: 'text-slate-400',
+      scanner: 'text-slate-500'
+    };
 
     if (isRed) return { 
       class: 'theme-red', 
